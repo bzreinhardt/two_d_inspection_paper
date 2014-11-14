@@ -10,13 +10,14 @@ Of particular interest for the case of planar motion are induction couplers that
 
 The more magnets in an array, the more uniform the magnetic field becomes, smoothing the spatial variation in the magnetic field that the target sees. This smoothness decreases the change in the magnetic field as the magnets spin, which may be undesirable in an application that requires high eddy-current force. The number of magnets per array is one of the many considerations in the design of an induction coupler.
 
-A straightforward example of an induction-coupler system is a single array spinning about an axis $\boldsymbol{a}$ near conductive surface with a normal vector $\boldsymbol{n}$. In this example, the force is 
+A straightforward example of an induction-coupler system is a single array spinning about an axis $\hat{\boldsymbol{a}}$ near conductive surface with a normal vector $\hat{\boldsymbol{n}}$. In this example, the force is 
 \begin{equation}\label{singlemagforce}
-\textbf{F} = C\left[  \left(1-\beta_N \right )\boldsymbol{a}_N^{\times}\boldsymbol{n} + \beta_N\boldsymbol{n} \right ] \omega
+\textbf{F} = C\left[  \left(1-\beta_N \right )\boldsymbol{a}_N{\times}\hat{\boldsymbol{n}} + \beta_N\hat{\boldsymbol{n}} \right ] \omega
 \end{equation}
 
-The factor $C$ scales spin speed of specific magnet arrays to the magnitude of the force they produce. $C$ is a function of the magnet properties, target properties, and $\boldsymbol{x}$. $\beta$ is the thrust ratio between the components of the force perpendicular and tangent to the target's surface. For small $\omega$, $\beta$ is small;\ref{fig:tan_v_norm_f} so, the force is approximately tangential to the surface.
+The factor $C$ scales spin speed of specific magnet arrays to the magnitude of the force they produce. $C$ is a function of the magnet properties, target properties, and $\boldsymbol{x}$. $\beta$ is the thrust ratio between the components of the force perpendicular and tangent to the target's surface. For small $\omega$, $\beta$ is small - see figure \ref{fig:tan_v_norm_f}, so the force is approximately tangential to the surface.
 
+%%TODO CHANGE THIS FIGURE
 \begin{figure}
 \includegraphics[width = 4cm, height = 4cm ]{figures/force_diagram.png}
 \label{fig:arry_force_diagram}
@@ -38,7 +39,7 @@ During in-plane movement, each array is associated with a single control degree 
 \caption{Shear and normal forces on the induction coupler under nominal operating conditions}
 \end{figure}
 
-Experimental development of an induction coupler verifies models showing that this force varies with the magnitude and sign of $\omega$ and demonstrates that the couplers can produce milliNewton shear forces perpendicular to a surface for low power. \ref{fig:tan_v_norm_f}. In the demonstrations described here, force is achieved using small COTS motors and permanent magnets. \ref{fig:cart_picture} Specifically, two small motors (BaneBots MP-36004-540) driven by 12V at a 25\% duty cycle while holding two neodymium permanent magnets (with an approximate dipole moment calculated to be $8.5\dot10^4 Am^2$[10]) together generate 5 mN, or 2.5 mN apiece. Spinning at 4200 RPM, each motor draws 0.25 amps of current, dissipating 0.75 W of electrical power. This power consumption corresponds to a power-specific force of 3.33 mN/W. \ref{fig:force_plot}
+Experimental development of an induction coupler verifies models showing that this force varies with the magnitude and sign of $\omega$ and demonstrates that the couplers can produce milliNewton shear forces perpendicular to a surface for low power. Figure \ref{fig:tan_v_norm_f} shows this relationship. In the demonstrations described here, force is achieved using small COTS motors and permanent magnets. Figure \ref{fig:cart_picture} shows the experiment. Specifically, two small motors (BaneBots MP-36004-540) driven by 12V at a 25\% duty cycle while holding two neodymium permanent magnets (with an approximate dipole moment calculated to be $8.5\dot10^4 Am^2$) together generate 5 mN, or 2.5 mN apiece. Spinning at 4200 RPM, each motor draws 0.25 amps of current, dissipating 0.75 W of electrical power. This power consumption corresponds to a power-specific force of 3.33 mN/W. See figure \ref{fig:force_plot}
 
 \begin{figure}
 \includegraphics[width = 4cm, height = 4cm ]{figures/cart_on_track.png}
