@@ -8,3 +8,10 @@
 *.aux
 *.out
 *.bbl
+AIAA.cls.bak biblio.bib.bak new_root.tex.bak root.tex.bak
+root.dvi
+tex/abstract.tex.bak tex/background.tex.bak tex/conclusion.tex.bak tex/induction_coupler_behaviors.tex.bak tex/introduction.tex.bak tex/mission_description.tex.bak tex/nomenclature.tex.bak tex/system.tex.bak
+AIAA.cls.bak biblio.bib.bak new_root.tex.bak root.tex.bak
+AIAA.cls.bak biblio.bib.bak new_root.tex.bak root.tex.bak
+AIAA.cls.bak biblio.bib.bak new_root.tex.bak root.tex.bak
+*.bak

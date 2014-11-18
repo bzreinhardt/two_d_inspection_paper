@@ -1,17 +1,22 @@
-\documentclass{article}
+\documentclass{AIAA}
 \usepackage{amsfonts,amsmath,amssymb}
 \usepackage{graphicx}
 \usepackage{color}
 \usepackage{url}
 \usepackage{hyperref}
 \begin{document}
-
+\title{A New Actuator for On-Orbit Inspection}
+\author{Benjamin Z. Reinhardt \footnote{Sibley School of Mechanical and Aerospace Engineering, bzr3@cornell.edu, and AIAA Student Member} and Mason A. Peck \footnote{Associate Professor, Sibley School of Mechanical and Aerospace Engineering, Full Member}}
+\affiliation{Cornell University, Ithaca, NY, 14850}
 %Changelog:
 %8/7/2014 - bzr3 - Uploaded for editing 
 
 %note, if it throws a 
-\input{tex/abstract.tex}
+\input{tex/abstract.tex} 
 
+\maketitle
+
+\input{tex/nomenclature.tex}
 \input{tex/introduction.tex}
 \input{tex/background.tex}
 
@@ -22,6 +27,9 @@
 
 \input{tex/system.tex}
 \input{tex/conclusion.tex}
+\section*{Acknowledgments}
+This work was supported by NASA NSTRF Grant \#NNX11AN46H %TODO PUT NUMBER HERE
+\section*{References}
 \bibliographystyle{plain}
 \bibliography{biblio.bib}
 \end{document}
