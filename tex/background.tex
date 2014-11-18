@@ -48,14 +48,14 @@ Once \textbf{A} is known on the surface of the plate, Maxwell's stress tensor so
 
 %" src="//upload.wikimedia.org/math/8/d/e/8dea2b36115634afa876918c145f67bf.png">
 
-
+% TODO Update this figure - make the vectors correct, perhaps make isometric
 \begin{figure}
-\includegraphics[width = 6cm, height = 6cm ]{figures/force_generation_diag.eps}
+\includegraphics[width = 6cm, height = 6cm ]{figures/iso_force_creation.eps}
 \label{fig:force_generation}
 \caption{Creating graphical intuition for the problem - a magnetic field directed into the conductor changes in the upward direction. This change induces a current to the left that interact with the original B field to create a downward force.}
 \end{figure}
 
-There are many ways to find \textbf{A} and the resultant actuation force, but few of them are suitable for a model that includes feedback control and rigid-body dynamics. \cite{Paudel2013}
+There are many ways to find the magnetic potential in the plate and its resultant actuation force, but few of them are suitable for a model that includes feedback control and rigid-body dynamics. \cite{Paudel2013}
 Finite element methods are the standard approach to solving this class of problems quasistatically. However, even those few commercially available FEM packages that can account for a moving source field are computationally expensive and require hand-tuning for each new geometries. These drawbacks make them unsuitable for the dynamical simulations necessary for online control. 
 
 There are also several analytical models for eddy-current forces, but most are also unsuitable for dynamical systems. Most of these models do not take into account a moving source field, which is an essential part of a dynamic system. All analytical solutions to the partial differential equation describing eddy-current propagation are tied to specific geometries. This is not inherently a problem, but most of the assumptions about the orientation of the field are too restrictive to be useful in a dynamic system that can move in 6 DoF near the conductive surface. 
@@ -72,5 +72,5 @@ This paper uses the steady-state Paudel and Bird method to model the force from 
  
 %% TODO THIS PARAGRAPH NEEDS TO BE TRUTHIFIED
 Systems of induction couplers can produce force in any direction relative to the target, for example both tangential and perpendicular to a surface on that target. Therefore, a chaser spacecraft generating a time-varying magnetic field can produce forces in all three translational degrees of freedom. Two induction couplers separated by a moment arm can also produce torques, for complete 6DoF actuation.
-
+%% TODO - move this. Perhaps include figures for this. 
 There are two ways for an induction coupler to generate its changing magnetic fields and resultant force: permanent magnets that move mechanically and electromagnets driven by time-varying currents. Each type of magnet is especially good at producing forces in different directions. For example, a single electromagnet with a sinusoidal driving current always repels the target. \cite{Reinhardt2012}.  A rotating permanent magnet is effective in producing a shear force, i.e. a force that lies in the plane of a surface.  Replicating the pure repulsive force of an electromagnet with a permanent magnet would require either a linear actuator or a complicated set of linkages. Therefore, a spacecraft that implements induction couplers likely incorporates a combination of permanent magnets and electromagnets..  This paper focuses primarily on a free-flyer inspection vehicle which uses those shear forces to move along its target. 
