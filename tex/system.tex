@@ -1,4 +1,5 @@
 \section{The Induction Coupler System}
+\label{sec:system}
 
 The rotational speed of each array controls the force between that array and the surface of the target. The sum of the forces from all the arrays and their resultant torque can be mapped through the linearized dynamics of the target and chaser to plan control inputs based on a desired maneuver. Nonlinearities are likely best accommodated through gain scheduling, a topic that the authors intend to take up as future work.
 
@@ -11,17 +12,12 @@ In the induction coupler, each array is the located on a vector $\boldsymbol{d}$
 
 \begin{figure}
 
-\includegraphics[width = 4cm, height = 4cm ]{figures/lin_fit.png}
-\caption{Linear fit between shear force and a magnet array's angular velocity. For the values listed in table \ref{table:values}, the slope is $c = 
+\includegraphics[width = 6cm]{figures/lin_fit.pdf}
+\caption{Linear fit between shear force and a magnet array's angular velocity. For the values listed in table \ref{table:values}, the slope is $c = 5.031 * 10^{-4} \frac{N}{rad/s}$}
 \label{fig:lin_fit}
-5.031 * 10^{-4} \frac{N}{rad/s}$}
 \end{figure}
 
-%% TODO MASON EDIT
-%%I have several questions about notation that arise in this section.  Matrices and scalars should be non-bold.  Vectors and tensors should be boldface.  You should not multiply a matrix by a vector or a tensor.  The superscript X notation is used only for matrices (e.g. 3x1 columns of numbers), which would be non-boldface.
 
-%% TODO MASON EDIT
-%% This is fine; make all appearances of 6Dof or 6DOF or 6 DoF consistent.
 The system kinematics are those of a standard 6 DoF rigid body. 
 \begin{equation}\label{eq:rotMrxPropigation}
 \dot{R} = \omega^{\times}R
@@ -89,19 +85,19 @@ A three-array inspection spacecraft performing a maneuver near a flat surface il
 
 The present analysis assumes that the inspection spacecraft maintains a small constant distance from the surface. The analysis assumes that the force normal to the surface can be ignored, so all motion remains in the plane parallel to the surface. 
 
-The results from a simulation of an inspection vehicle in figures \ref{fig:trajectory} and \ref{fig:theta_and_speeds} with the parameters in table \ref{table:values} demonstrates that a small spacecraft can use induction couplers and PD control to inspect a large area in a 
-reasonable amount of time. With a 0.1 m inspection swath, it could cover the 39 $m^2$ surface of the Destiny ISS module in just under two hours.   
+The results from a simulation of an inspection vehicle in figures \ref{fig:trajectory} and \ref{fig:theta_and_speeds} with the parameters in table \ref{table:values} demonstrates that a small spacecraft can use induction couplers and an LQR controller to inspect a large area in a 
+reasonable amount of time. In the simulation, the inspector traversed path defined by several waypoints that was 3.4 m long and included 90 degrees of heading change. Extending these results, an inspector with a 0.1 m inspection swath could cover the 39 $m^2$ surface of the Destiny ISS module in just under two hours.   
 
 \begin{figure}
 
-\includegraphics[width = 6cm, height = 6cm ]{figures/planar_trajectory.png}
+\includegraphics[width = 6cm, height = 6cm ]{figures/sim_trajectory.eps}
 \caption{Trajectory of a simulated inspection vehicle. Using conservative parameters A series of waypoints specify a path 3.4 m long with a 90 degree turn. }
 \label{fig:trajectory}
 \end{figure}
 
 \begin{figure}
 
-\includegraphics[width = 6cm, height = 6cm ]{figures/theta_and_speed.png}
+\includegraphics[width = 6cm, height = 6cm ]{figures/heading_and_control_sim.eps}
 \caption{Heading and speed for a simulated inspection vehicle. }
 \label{fig:theta_and_speeds}
 \end{figure}

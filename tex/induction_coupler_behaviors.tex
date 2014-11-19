@@ -1,11 +1,13 @@
 \section{Induction Coupler Behaviors}
-
+\label{sec:behavior}
+\subsection{Simplified Model}
+\label{sec:simple_model}
 Of particular interest for the case of planar motion are induction couplers that include permanent magnets. Such an induction coupler consists of a mechanism that spins one or more permanent magnets at a variable speed. In its most elementary form, a permanent-magnet induction coupler uses only a single dipole that spins in a plane. However, each mechanism within the induction coupler can include any number of magnets. A large $\vert \textbf{B} \vert$ and $\nabla \textbf{B}$ maximizes the eddy-current force produced by the array of magnets. These properties can be achieved by using any number of dipoles orthogonal to the spin axis, or a circular Halbach array consisting of dipoles alternating between perpendicular and parallel to the spin axis.
 
 \begin{figure}
-\includegraphics[width = 6cm, height = 6cm ]{figures/Magnet_Arrays.png}
+\includegraphics[width = 6cm, height = 6cm ]{figures/two_different_arrays.eps}
 
-\caption{Different arrangement of permanent magnet arrays. Halbach array (left) and dipole array(right)}
+\caption{Two different magnet arrays with their magnetic fields and dipole moments near a plate. The field two-magnet orthogonal array is similar to a two pole-pair Halbach array(right.) Each generates force by spinning about an axis out of the page. An orthogonal array is easier to build and the forces from a Halbach array are easier to model.  }
 \label{fig:magnet_arrays}
 \end{figure}
 
@@ -16,9 +18,16 @@ A straightforward example of an induction-coupler system is a single array spinn
 \textbf{F} = C\left[  \left(1-\beta \right )\hat{\boldsymbol{a}}{\times}\hat{\boldsymbol{n}} + \beta\hat{\boldsymbol{n}} \right ] \omega
 \end{equation}
 
-The factor $C$ scales spin speed of specific magnet arrays to the magnitude of the force they produce. $C$ is a function of the magnet properties, target properties, and $\boldsymbol{x}$. $\beta$ is the thrust ratio between the components of the force perpendicular and tangent to the target's surface. For small $\omega$, $\beta$ is small - see figure \ref{fig:tan_v_norm_f}, so the force is approximately tangential to the surface.
+The factor $C$ scales spin speed of specific magnet arrays to the magnitude of the force they produce. $C$ is a function of the magnet properties, target properties, and $\boldsymbol{x}$. $\beta$ is the thrust ratio between the components of the force perpendicular and tangent to the target's surface. $\beta$ changes nonlinearly with $\omega$ and the array's relative speed to the surface, but for small $\omega$, $\beta$ approximately zero so the force is approximately tangential to the surface. 
 
-%%TODO CHANGE THIS FIGURE
+This model of the force makes two simplifying assumptions based on the planar inspection use case:
+\begin{itemize}
+\item{Assumption 1:} The angular speed and translational speed of the coupler are both small. At low speeds, the relationship between \textbf{F} and $\omega$ is approximately linear. This linearity is present in the nonlinear model (fig. \ref{fig:lin_fit}) and experimental data (fig. \ref{fig:force_plot}.)
+\item{Assumption 2:} The array's axis remains perpendicular to the plate.  
+
+\end{itemize}
+
+
 \begin{figure}
 \includegraphics[width = 6cm, height = 6cm ]{figures/spin_mag_diagram.eps}
 
@@ -37,12 +46,14 @@ During in-plane movement, each array is associated with a single control degree 
 \end{figure}
 
 \begin{figure}
-\includegraphics[width = 6cm, height = 6cm ]{figures/tan_v_norm_force.png}
+\includegraphics[width = 6cm, height = 6cm ]{figures/tan_v_norm_force.pdf}
 
 \caption{Shear and normal forces on the induction coupler under nominal operating conditions}
 \label{fig:tan_v_norm_f}
 \end{figure}
 
+\subsection{Induction Coupler Experiments}
+\label{sec:experiment}
 Experimental development of an induction coupler verifies models showing that this force varies with the magnitude and sign of $\omega$ and demonstrates that the couplers can produce milliNewton shear forces perpendicular to a surface for low power. Figure \ref{fig:force_plot} shows the input-output relationship between the motor speeds and the eddy-current forces they produce. In the demonstrations described here, force is achieved using two small COTS motors (BaneBots MP-36004-540) and neodymium magnets. Figure \ref{fig:cart_picture} shows the experiment  and table \ref{tab:exp_vals} shows the parameters used in the experiment.
 
 \begin{table}
@@ -82,7 +93,7 @@ System & Specific Force (mN/W) \\
 
 
 \begin{figure}
-\includegraphics[width = 6cm, height = 6cm ]{figures/motor_force_speed_plot.png}
+\includegraphics[width = 6cm, height = 6cm ]{figures/motor_force_speed_plot.pdf}
 
 \caption{Force on a one-dimensional air-track levitated cart vs. motor speed for a small, two-motor induction coupler. Oscillations in the force reported here are due to a combination of sensor artifacts and the dynamics of the cart.}
 \label{fig:force_plot}
@@ -90,5 +101,5 @@ System & Specific Force (mN/W) \\
 
 The steady-state model of eddy-current forces makes two assumptions: that $\frac{1}{\omega}$ is much larger than the characteristic time of the LR circuit approximated by the bulk conductor and that the kinematics of the chaser and target are much slower than the period of rotation of the spinning magnetic fields that act on the target.
 
-There are many other parameters governing induction-coupler force. The force magnitude decreases with $\frac{1}{g^4}$. Larger magnets provide stronger fields that increase the force. Greater thickness and 
+There are many other parameters governing induction-coupler force that any implementation of the system needs to consider. The force magnitude decreases with $\frac{1}{g^4}$. Larger magnets provide stronger fields that increase the force. Greater thickness and 
 conductivity of the target increase the induced current and thereby scale up the force. Spin speed increases the force nonlinearly by increasing the rate of change in the magnetic field. At low speeds this relationship is approximately linear (see fig. \ref{fig:lin_fit}) but increasing speed past a certain point shows diminishing returns because the penetration depth (or skin depth) of the induced current decreases at high frequencies. \cite{Paudel2013} The high dimensionality of this system motivates future work to algorithmically find suitable induction coupler design for different applications.

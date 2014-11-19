@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="iso_force_creation.eps">
+   sodipodi:docname="iso_force_creation.svg">
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -27,7 +27,7 @@
      inkscape:cx="386.65218"
      inkscape:cy="636.48947"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g3095"
      showgrid="false"
      inkscape:window-width="1406"
      inkscape:window-height="1028"
@@ -170,7 +170,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -405,5 +405,50 @@
          id="path5222-9"
          d="m 228.88,660.79 0.1,0.02 0.1,0.02 0.09,0.02 0.1,0.03 0.09,0.03 0.08,0.03 0.09,0.03 0.08,0.04 0.07,0.03 0.08,0.04 0.07,0.04 0.07,0.04 0.07,0.05 0.06,0.04 0.06,0.05 0.06,0.05 0.05,0.05 0.05,0.05 0.05,0.06 0.04,0.05 0.04,0.06 0.04,0.06 0.04,0.06 0.03,0.06 0.02,0.07 0.03,0.06 0.02,0.07 0.02,0.06 0.01,0.07 0.01,0.07 0,0.07 0,0.07 c 0,0.92 -0.86,1.71 -2.46,1.71 l -0.13,-0.47 c 1,0 1.18,-0.78 1.18,-1.24 0,-0.76 -0.48,-1.38 -1.44,-1.38 h -1.55 v -0.36 h 1.93 c 0.2,0 0.66,0 1,-0.43 0.33,-0.41 0.33,-0.97 0.33,-1.08 0,-0.12 0,-1.39 -1.43,-1.39 h 0 -1.83 v 2.9 0.36 2.62 h 1.81 l 0.13,0.47 h -4.32 v -0.47 h 1.08 v -5.88 h -1.08 v -0.47 h 4.62 c 1.65,0 2.48,0.88 2.48,1.85 0,0.96 -0.85,1.62 -2.04,1.71 z"
          inkscape:connector-curvature="0"
-         style="fill:#000000;stroke-width:0" /></g>  </g>
+         style="fill:#000000;stroke-width:0" /></g>    <g
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="g3095"
+       transform="matrix(6,0,0,-6,-997.8789,4545.9)"
+       xml:space="preserve"
+       stroke-miterlimit="10.433"
+       font-style="normal"
+       font-variant="normal"
+       font-weight="normal"
+       font-stretch="normal"
+       font-size-adjust="none"
+       letter-spacing="normal"
+       word-spacing="normal"
+       ns0:text="F"
+       ns0:preamble="/home/ben/configs/anyname.ini"><path
+         style="fill:#000000;stroke-width:0"
+         inkscape:connector-curvature="0"
+         d="m 270.28843,651.91105 h -5.46 v -0.31 h 0.24 c 0.76,0 0.79,-0.11 0.79,-0.46 v -5.21 c 0,-0.36 -0.03,-0.47 -0.79,-0.47 h -0.24 v -0.31 c 0.35,0.04 1.12,0.04 1.51,0.04 0.41,0 1.32,0 1.67,-0.04 v 0.31 h -0.32 c -0.95,0 -0.95,0.13 -0.95,0.48 v 2.44 h 0.86 c 0.95,0 1.05,-0.31 1.05,-1.16 h 0.25 v 2.63 h -0.25 c 0,-0.83 -0.1,-1.16 -1.05,-1.16 h -0.86 v 2.51 c 0,0.33 0.02,0.4 0.49,0.4 h 1.19 c 1.49,0 1.74,-0.55 1.9,-1.92 h 0.25 z"
+         id="path3097" /><g
+         ns0:preamble="/home/ben/configs/anyname.ini"
+         ns0:text="\\textbf{F}"
+         text-anchor="start"
+         word-spacing="normal"
+         letter-spacing="normal"
+         font-size-adjust="none"
+         font-stretch="normal"
+         font-weight="normal"
+         font-variant="normal"
+         font-style="normal"
+         fill-opacity="1"
+         fill-rule="evenodd"
+         fill="none"
+         stroke-opacity="1"
+         stroke-dashoffset="0"
+         stroke-dasharray="none"
+         stroke-miterlimit="10.433"
+         stroke-linejoin="miter"
+         stroke-linecap="butt"
+         stroke="black"
+         xml:space="preserve"
+         transform="matrix(6.000000,0,0,-6.000000,-1200.000000,4500.000000)"
+         id="g3219"><path
+           id="path3221"
+           fill="black"
+           stroke-width="0"
+           d="M229.84,663.99 H223.82 V663.52 H224.9 V657.7 H223.82 V657.23 C224.2,657.27,225.2,657.27,225.64,657.27 C226.13,657.27,227.21,657.27,227.65,657.23 V657.7 H226.31 V660.38 H226.8 C227.76,660.38,227.85,659.96,227.85,659.22 H228.32 V662.01 H227.85 C227.85,661.28,227.77,660.85,226.8,660.85 H226.31 V663.52 H227.7 C229.3,663.52,229.53,662.76,229.68,661.6 H230.15 Z " /></g></g>  </g>
 </svg>
